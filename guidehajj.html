@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERA</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+        body[dir="rtl"], [dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+body {
+     font-family: poppins sans-serif;
+     font-weight: 500;
+    }
+
+.language-selector {
+      position: relative;
+    }
+  
+    .lang-link {
+      color: black;
+      font-size: 1rem;
+      text-decoration: none;
+      padding: 10px;
+    }
+  
+    .language-dropdown {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background-color: #a4a4a4;
+      padding: 10px;
+      border-radius: 4px;
+    }
+  
+    .language-selector:hover .language-dropdown {
+      display: block;
+    }
+  
+    .language-dropdown a {
+      color: black;
+      text-decoration: none;
+      padding: 8px 15px;
+      display: block;
+    }
+  
+    .language-dropdown a:hover {
+      background-color: #a4a4a4;
+    }
+
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .course-image {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    .content {
+      padding: 30px;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #eee;
+      color: #6d2e8b;
+      padding: 4px 10px;
+      font-size: 0.85rem;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      color: #2e003e;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .features ul {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    .price {
+      font-size: 1.3rem;
+      color: #38b000;
+      font-weight: bold;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 1rem;
+      margin-left: 10px;
+    }
+
+    .cta {
+      margin-top: 20px;
+    }
+
+    .cta a {
+      text-decoration: none;
+      background-color: #6d2e8b;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+
+    </style>
+</head>
+<body>
+
+  <header> 
+    <div class="header-container">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.png" alt="Logo El Rayene Academy">
+        </a>
+      </div>
+  
+      <!-- Hamburger menu for mobile -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  
+      <!-- Navigation links -->
+      <nav id="nav">
+        <a href="index.html">الرئيسية</a>
+<a href="#courses">الدورات</a>
+<a href="#about">من نحن</a>
+<a href="#contact">اتصل بنا</a>
+<a class="cta" href="https://t.me/elrayeneonline" target="_blank">انضم إلى الأكاديمية</a>
+
+        <!-- Language Selector -->
+       
+        
+<div class="dropdown" id="languageDropdown">
+<button class="dropdown-toggle" onclick="toggleDropdown()">🌐 اختر اللغة</button>
+<div class="dropdown-menu">
+<a href="guidehajj.html">🇩🇿 العربية</a>
+<a href="guidehajjfr.html">🇫🇷 Français</a>
+</div>
+</div>
+
+
+      </nav>
+  
+      <!-- Call to Action -->
+    </div>
+  </header>
+
+
+      <div class="container">
+        <img src="Kaaba-Tawaf-1-3166741237.jpg" alt="Couverture de la formation" class="course-image">
+        
+        <div class="content">
+          <span class="badge">مرشد حج وعمرة</span>
+          <div class="coming-soon" style="text-align: center; margin-top: 20px; font-size: 1.2rem;">
+            <p><strong>🔜 Disponible bientôt | متوفر قريباً</strong></p>
+          </div>
+         
+    
+        
+  
+        </div>
+      </div>
+
+
+
+      <section id="about" style="padding: 50px 20px; background-color: #f9f9f9;">
+        <div style="max-width: 1000px; margin: auto; text-align: center;">
+          <h2 style="font-size: 2.5rem; color: #6d2e8b;">من نحن – أكاديمية الراين</h2>
+          <p style="font-size: 1.2rem; color: #333; margin-top: 20px;">
+            أكاديمية الراين هي منصة تعليمية إلكترونية تهدف إلى التميز وتوفير فرص التعلم للجميع.
+            رسالتنا هي تقديم تعليم عالي الجودة في متناول الجميع، أينما كانوا. نحن نؤمن بأن لكل فرد
+            الحق في التعلم والتطور وتحقيق النجاح.
+          </p>
+      
+          <div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+            <div style="flex: 1 1 250px;">
+              <h3 style="color: #6d2e8b;">🎯 رسالتنا</h3>
+              <p>
+                تقديم تكوينات مهنية، سهلة الوصول وفعالة، تهدف إلى إعداد جيل جديد من الكفاءات والطاقات.
+              </p>
+            </div>
+            <div style="flex: 1 1 250px;">
+              <h3 style="color: #6d2e8b;">🌟 قيمنا</h3>
+              <p>
+                التميز، سهولة الوصول، الابتكار، والالتزام. نحن نضع المتعلم في صميم كل ما نقوم به.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    
+      <section id="contact" style="padding: 50px 20px; background-color: #140021; color: white;">
+        <div style="max-width: 800px; margin: auto; text-align: center;">
+          <h2 style="font-size: 2.5rem; color: #d36bd8;">تواصل معنا</h2>
+          <p style="font-size: 1.2rem; margin-top: 20px;">
+            لديك سؤال؟ تحتاج إلى معلومات؟ فريقنا مستعد للاستجابة لك عبر تيليغرام.
+          </p>
+          <a href="https://t.me/elrayeneonline" target="_blank" 
+             style="display: inline-block; margin-top: 30px; padding: 15px 30px; 
+                    background-color: #d36bd8; color: white; border-radius: 8px; 
+                    text-decoration: none; font-weight: bold;">
+            📲 تواصل معنا عبر تيليغرام
+          </a>
+        </div>
+      </section>
+      
+    
+      <footer style="background-color: #0a0014; color: #fff; padding: 40px 20px; text-align: center;">
+        <div style="max-width: 1000px; margin: auto;">
+          <h3 style="color: #d36bd8; font-size: 1.5rem;">أكاديمية الريان</h3>
+          <p style="margin-top: 10px;">
+            تعلّمي. تطوّري. انجحي.
+          </p>
+      
+          <div style="margin: 30px 0;">
+            <a href="#home" style="margin: 0 15px; color: #fff; text-decoration: none;">الرئيسية</a>
+            <a href="#courses" style="margin: 0 15px; color: #fff; text-decoration: none;">الدورات</a>
+            <a href="#about" style="margin: 0 15px; color: #fff; text-decoration: none;">من نحن</a>
+            <a href="#contact" style="margin: 0 15px; color: #fff; text-decoration: none;">تواصل معنا</a>
+          </div>
+      
+          <div style="margin-bottom: 20px;">
+            <a href="https://t.me/elrayeneonline" target="_blank" 
+               style="color: #d36bd8; text-decoration: none;">
+              📲 تيليغرام
+            </a>
+          </div>
+      
+          <p style="font-size: 0.9rem; color: #aaa;">
+            &copy; 2025 أكاديمية الريان. جميع الحقوق محفوظة.
+          </p>
+        </div>
+      </footer>  
+
+
+  <script>
+    // Toggle mobile navigation on hamburger click
+    const hamburger = document.getElementById("hamburger");
+    const nav = document.getElementById("nav");
+
+    hamburger.addEventListener("click", function() {
+      nav.classList.toggle("active");
+    });
+  </script>
+  
+<script>
+  function toggleDropdown() {
+    const dropdown = document.getElementById("languageDropdown");
+    dropdown.classList.toggle("open");
+  }
+
+  // Close the dropdown if user clicks outside
+  document.addEventListener("click", function(event) {
+    const dropdown = document.getElementById("languageDropdown");
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.remove("open");
+    }
+  });
+</script>
+
+</body>
+</html>
