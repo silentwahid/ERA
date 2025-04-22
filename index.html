@@ -1,447 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ERA</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-        body[dir="rtl"], [dir="rtl"] {
-  direction: rtl;
-  text-align: right;
-}
-
-body {
-  font-family: "IBM Plex Sans Arabic", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-.language-selector {
-      position: relative;
-    }
-  
-    .lang-link {
-      color: black;
-      font-size: 1rem;
-      text-decoration: none;
-      padding: 10px;
-    }
-  
-    .language-dropdown {
-      display: none;
-      position: absolute;
-      top: 30px;
-      left: 0;
-      background-color: #a4a4a4;
-      padding: 10px;
-      border-radius: 4px;
-    }
-  
-    .language-selector:hover .language-dropdown {
-      display: block;
-    }
-  
-    .language-dropdown a {
-      color: black;
-      text-decoration: none;
-      padding: 8px 15px;
-      display: block;
-    }
-  
-    .language-dropdown a:hover {
-      background-color: #a4a4a4;
-    }
-
-
-    </style>
-</head>
-<body>
-
-    <header> 
-        <div class="header-container">
-          <!-- Logo -->
-          <div class="logo">
-            <a href="index.html">
-              <img src="logo.png" alt="Logo El Rayene Academy">
-            </a>
-          </div>
-      
-          <!-- Hamburger menu for mobile -->
-          <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-      
-          <!-- Navigation links -->
-          <nav id="nav">
-            <a href="index.html">الرئيسية</a>
-<a href="#courses">الدورات</a>
-<a href="#about">من نحن</a>
-<a href="#contact">اتصل بنا</a>
-<a class="cta" href="https://t.me/elrayeneonline" target="_blank">انضم إلى الأكاديمية</a>
-
-            <!-- Language Selector -->
-           
-            
-<div class="dropdown" id="languageDropdown">
-  <button class="dropdown-toggle" onclick="toggleDropdown()">🌐 اختر اللغة</button>
-  <div class="dropdown-menu">
-    <a href="index.html">🇩🇿 العربية</a>
-    <a href="indexfr.html">🇫🇷 Français</a>
-  </div>
-</div>
-
-
-          </nav>
-      
-          <!-- Call to Action -->
-        </div>
-      </header>
-
-  <section style="padding: 60px 20px; background-color: #fefafe;" dir="rtl">
-    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
-  
-      <!-- النص -->
-      <div style="flex: 1 1 500px; min-width: 300px;">
-        <p style="font-size: 0.9rem; color: #6d2e8b;">برعاية ERA</p>
-        <h1 style="font-size: 2.5rem; color: #2e003e; margin: 20px 0;">
-          تعلم من منزلك ✨<br>
-          مع أكاديمية الريان
-        </h1>
-        <p style="font-size: 1.1rem; color: #555;">
-          ERA هي أكاديمية تدريب عبر الإنترنت تضم أكثر من 1000 طالب، وأكثر من 200 دورة، ونتائج مضمونة.
-        </p>
-        <div style="margin-top: 30px;">
-          <a href="#" style="padding: 12px 24px; background-color: #6d2e8b; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">ابدئ الآن</a>
-          <a href="#courses" style="margin-right: 20px; color: #6d2e8b; font-weight: bold; text-decoration: none;">المزيد من التفاصيل</a>
-        </div>
-      </div>
-  
-      <!-- الصورة والبطاقات -->
-      <div style="flex: 1 1 500px; min-width: 300px; position: relative; margin-top: 40px;">
-        <img src="eleve-elearning-formation.jpg" alt="طالبة تتعلم عن بعد" style="width: 100%; max-width: 450px; border-radius: 16px; box-shadow: 0 0 20px #eee;">
-        
-        <!-- بطاقات عائمة -->
-        <div style="position: absolute; top: 10%; right: -20px; background: white; border-radius: 12px; padding: 10px 15px; box-shadow: 0 0 10px rgba(0,0,0,0.1); font-size: 0.9rem;">
-          👩‍🎓 +1000 طالب راضي
-        </div>
-  
-        <div style="position: absolute; bottom: 20%; right: -20px; background: white; border-radius: 12px; padding: 10px 15px; box-shadow: 0 0 10px rgba(0,0,0,0.1); font-size: 0.9rem;">
-          📚 +200 دورة تدريبية
-        </div>
-  
-        <div style="position: absolute; top: 30%; left: 0px; background: white; border-radius: 12px; padding: 10px 15px; box-shadow: 0 0 10px rgba(0,0,0,0.1); font-size: 0.9rem;">
-          👩‍🏫 تدريب مع مدربات مؤهلات
-        </div>
-      </div>
-    </div>
-  
-    <!-- الإحصائيات -->
-    <div style="max-width: 1000px; margin: 60px auto 0; display: flex; flex-wrap: wrap; justify-content: space-around; text-align: center; color: #6d2e8b;">
-      <div>
-        <h3 style="font-size: 2rem;">+200</h3>
-        <p>دورة متاحة</p>
-      </div>
-      <div>
-        <h3 style="font-size: 2rem;">+1000</h3>
-        <p>طالبة عبر الإنترنت</p>
-      </div>
-      <div>
-        <h3 style="font-size: 2rem;">%98</h3>
-        <p>نسبة الرضا</p>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="courses" style="padding: 60px 20px; background-color: #f9f9f9;" dir="rtl">
-    <div style="max-width: 1300px; margin: auto; text-align: center;">
-      <h2 style="font-size: 2.5rem; color: #6d2e8b;">دوراتنا التدريبية</h2>
-      
-      <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 40px;">
-  
-        <!-- بطاقة دورة -->  
-            <!-- TOT -->
-            <a href="TOT.html">
-              <div style="flex: 1 1 calc(25% - 20px); background: white; border-radius: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden; min-width: 260px; max-width: 300px;">
-           <img src="Train-the-trainer-program-skills-2074334888.jpg" alt="دورة 3" style="width: 100%; height: 180px; object-fit: cover;">
-           <div style="padding: 20px; text-align: right;">
-             <h3 style="text-decoration: none;
-              font-size: 1.1rem; color: #2e003e;">مدرب المدربين</h3>
-          
-             <div style="display: flex; align-items: center; justify-content: space-between; margin: 10px 0;">
-               <span style="font-size: 0.85rem; color: #6d2e8b;">   كن مدرب المدربين: القيادة والتقنيات الفعالة  </span>
-             
-             </div>
-             <div style="margin-top: 10px;">
-               <strong style="color: #38b000;">10000 دج</strong>
-               <span style="text-decoration: line-through; color: #999; margin-right: 5px;">15000 دج</span>
-               <span style="margin-right: 10px; font-size: 0.85rem; color: #ffcc00;">⭐️ 4.8</span>
-             </div>
-           </div>
-         </div>
-          </a>
-
-
-         <a href="assistantematernelle.html">
-            <div style="flex: 1 1 calc(25% - 20px); background: white; border-radius: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden; min-width: 260px; max-width: 300px;">
-          <img src="th-4196242390.png" alt="دورة 1" style="width: 100%; height: 180px; object-fit: cover;">
-          <div style="padding: 20px; text-align: right;">
-            <h3 style="font-size: 1.1rem; color: #2e003e;"> مربية اطفال .مسيرة روضة معلمة تمهيدي</h3>
-            <div style="display: flex; align-items: center; justify-content: space-between; margin: 10px 0;">
-              <span style="font-size: 0.85rem; color: #6d2e8b;">     تربية الطفولة المبكرة: الاحتراف في التحضيري والتمهيدي</span>
-            </div>
-            <div style="margin-top: 10px;">
-              <strong style="color: #38b000;">6500 دج</strong>
-              <span style="text-decoration: line-through; color: #999; margin-right: 5px;">10000 دج</span>
-              <span style="margin-right: 10px; font-size: 0.85rem; color: #ffcc00;">⭐️ 4.8</span>
-            </div>
-          </div>
-        </div>
-         </a>
-      
-
-           <!-- PTOT -->
-           <a href="PTOT.html">
-            <div style="flex: 1 1 calc(25% - 20px); background: white; border-radius: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden; min-width: 260px; max-width: 300px;">
-          <img src="PTOT.jpg" alt="دورة 3" style="width: 100%; height: 180px; object-fit: cover;">
-          <div style="padding: 20px; text-align: right;">
-            <h3 style="font-size: 1.1rem; color: #2e003e;" >   مدرب مدربين محترف   </h3>
-         
-            <div style="display: flex; align-items: center; justify-content: space-between; margin: 10px 0;">
-              <span style="font-size: 0.85rem; color: #6d2e8b;">    كن مدرب مدربين محترف :  القيادة والتقنيات الفعالة  </span>
-             
-
-            </div>
-            <div style="margin-top: 10px;">
-              <strong style="color: #38b000;">10000 دج</strong>
-              <span style="text-decoration: line-through; color: #999; margin-right: 5px;">16000 دج</span>
-              <span style="margin-right: 10px; font-size: 0.85rem; color: #ffcc00;">⭐️ 4.7</span>
-            </div>
-          </div>
-        </div>
-         </a>
-
-
-
-           <!-- سكرتارية -->
-           <a href="secrétariat.html">
-            <div style="flex: 1 1 calc(25% - 20px); background: white; border-radius: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden; min-width: 260px; max-width: 300px;">
-          <img src="secretariat-2-3379953449.jpg" alt="دورة 4" style="width: 100%; height: 180px; object-fit: cover;">
-          <div style="padding: 20px; text-align: right;">
-            <h3 style="font-size: 1.1rem; color: #2e003e;" >    سكرتارية   </h3>
-           
-            <div style="display: flex; align-items: center; justify-content: space-between; margin: 10px 0;">
-              <span style="font-size: 0.85rem; color: #6d2e8b;">   أسرار السكرتارية المتعددة المهام: التنظيم والتواصل    </span>
-          
-            </div>
-            <div style="margin-top: 10px;">
-              <strong style="color: #38b000;">4200 دج</strong>
-              <span style="text-decoration: line-through; color: #999; margin-right: 5px;">7600 دج</span>
-              <span style="margin-right: 10px; font-size: 0.85rem; color: #ffcc00;">⭐️ 4.6</span>
-            </div>
-          </div>
-        </div>
-         </a>
-
-
-
-
-  
-        <!-- دورة الحج والعمرة -->
-         <a href="guidehajj.html">
-            <div style="flex: 1 1 calc(25% - 20px); background: white; border-radius: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden; min-width: 260px; max-width: 300px;">
-          <img src="Kaaba-Tawaf-1-3166741237.jpg" alt="دورة 2" style="width: 100%; height: 180px; object-fit: cover;">
-          <div style="padding: 20px; text-align: right;">
-            <h3 style="font-size: 1.1rem; color: #2e003e;">   مرشد حج وعمرة     </h3>
-            
-            <div style="display: flex; align-items: center; justify-content: space-between; margin: 10px 0;">
-              <span style="font-size: 0.85rem; color: #6d2e8b;">     كل ما تحتاجه لتصبح مرشدًا للحج والعمرة – دورة تطبيقية   </span>
-             
-            </div>
-            <div style="margin-top: 10px;">
-              <strong style="color: #38b000;">5600 دج</strong>
-              <span style="text-decoration: line-through; color: #999; margin-right: 5px;">9300 دج</span>
-              <span style="margin-right: 10px; font-size: 0.85rem; color: #ffcc00;">⭐️ 4.5</span>
-            </div>
-          </div>
-        </div>
-         </a>
-      
-  
-     
-
-      
-  
-      </div>
-  
-    </div>
-  </section>
-
-
-  <section id="temoignages" style="padding: 60px 20px; background: #f9fdfc; direction: rtl;">
-    <div style="max-width: 1100px; margin: auto; text-align: center;">
-      <p style="color: #6d2e8b; font-weight: bold; font-size: 1rem;">شهادات الطالبات</p>
-      <h2 style="font-size: 2.2rem; color: #2f2f2f; margin-bottom: 40px;">
-        آراء <span style="color: #28a745;">طالباتنا</span>
-      </h2>
-  
-      <!-- Testimonials Grid -->
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-  
-        <!-- Video Testimonial 1 -->
-        <div style="background: white; border-radius: 15px; padding: 20px; max-width: 450px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-          <video width="100%" height="250" muted controls style="border-radius: 10px;">
-            <source src="WhatsApp Vidéo.mp4" type="video/mp4">
-            متصفحك لا يدعم تشغيل الفيديو.
-          </video>
-          <p style="font-weight: bold; margin-top: 15px;">أمينة التواتي</p>
-          <p style="color: #999; font-size: 0.9rem;">طالبة في تكوين مساعدات الطفولة، وهران</p>
-        </div>
-  
-        <!-- Video Testimonial 2 -->
-        <div style="background: white; border-radius: 15px; padding: 20px; max-width: 450px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-          <video width="100%" height="450" muted controls style="border-radius: 10px;">
-            <source src="1001.mp4" type="video/mp4">
-            متصفحك لا يدعم تشغيل الفيديو.
-          </video>
-          <p style="font-weight: bold; margin-top: 15px;">فاطمة زروقي</p>
-          <p style="color: #999; font-size: 0.9rem;">طالبة TOT، بجاية</p>
-        </div>
-  
-        <!-- Text Testimonial 1 -->
-        <div style="background: white; border-radius: 15px; padding: 30px; max-width: 450px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-          <img src="p.jpg" alt="étudiante" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 15px;">
-          <div style="font-size: 1.5rem; color: #f9c200;">★★★★★</div>
-          <p style="margin: 20px 0; font-size: 0.95rem; color: #444;">
-            "تابعت دورة التصميم الجرافيكي مع أكاديمية ERA وكانت تجربة رائعة. الفريق محترف جداً والدروس مفيدة."
-          </p>
-          <p style="font-weight: bold; margin-bottom: 4px;">سارة بن خضرة</p>
-          <p style="color: #999; font-size: 0.9rem;">طالبة في السكرتارية، الجزائر</p>
-        </div>
-  
-        <!-- Text Testimonial 2 -->
-        <div style="background: white; border-radius: 15px; padding: 30px; max-width: 450px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-          <img src="p.jpg" alt="étudiante" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 15px;">
-          <div style="font-size: 1.5rem; color: #f9c200;">★★★★★</div>
-          <p style="margin: 20px 0; font-size: 0.95rem; color: #444;">
-            "الدورات الحضورية ساعدتني كثيرًا في تحسين مهاراتي. شكرًا لفريق ERA على الدعم والمتابعة المميزة."
-          </p>
-          <p style="font-weight: bold; margin-bottom: 4px;">ياسمين مشري</p>
-          <p style="color: #999; font-size: 0.9rem;">طالبة في المساعدة التربوية، الجزائر العاصمة</p>
-        </div>
-  
-      </div>
-    </div>
-  </section>
-  
-  <section id="about" style="padding: 50px 20px; background-color: #f9f9f9;">
-    <div style="max-width: 1000px; margin: auto; text-align: center;">
-      <h2 style="font-size: 2.5rem; color: #6d2e8b;">من نحن – أكاديمية الراين</h2>
-      <p style="font-size: 1.2rem; color: #333; margin-top: 20px;">
-        أكاديمية الراين هي منصة تعليمية إلكترونية تهدف إلى التميز وتوفير فرص التعلم للجميع.
-        رسالتنا هي تقديم تعليم عالي الجودة في متناول الجميع، أينما كانوا. نحن نؤمن بأن لكل فرد
-        الحق في التعلم والتطور وتحقيق النجاح.
-      </p>
-  
-      <div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
-        <div style="flex: 1 1 250px;">
-          <h3 style="color: #6d2e8b;">🎯 رسالتنا</h3>
-          <p>
-            تقديم تكوينات مهنية، سهلة الوصول وفعالة، تهدف إلى إعداد جيل جديد من الكفاءات والطاقات.
-          </p>
-        </div>
-        <div style="flex: 1 1 250px;">
-          <h3 style="color: #6d2e8b;">🌟 قيمنا</h3>
-          <p>
-            التميز، سهولة الوصول، الابتكار، والالتزام. نحن نضع المتعلم في صميم كل ما نقوم به.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="contact" style="padding: 50px 20px; background-color: #140021; color: white;">
-    <div style="max-width: 800px; margin: auto; text-align: center;">
-      <h2 style="font-size: 2.5rem; color: #d36bd8;">تواصل معنا</h2>
-      <p style="font-size: 1.2rem; margin-top: 20px;">
-        لديك سؤال؟ تحتاج إلى معلومات؟ فريقنا مستعد للاستجابة لك عبر تيليغرام.
-      </p>
-      <a href="https://t.me/elrayeneonline" target="_blank" 
-         style="display: inline-block; margin-top: 30px; padding: 15px 30px; 
-                background-color: #d36bd8; color: white; border-radius: 8px; 
-                text-decoration: none; font-weight: bold;">
-        📲 تواصل معنا عبر تيليغرام
-      </a>
-    </div>
-  </section>
-  
-
-  <footer style="background-color: #0a0014; color: #fff; padding: 40px 20px; text-align: center;">
-    <div style="max-width: 1000px; margin: auto;">
-      <h3 style="color: #d36bd8; font-size: 1.5rem;">أكاديمية الريان</h3>
-      <p style="margin-top: 10px;">
-        تعلّمي. تطوّري. انجحي.
-      </p>
-  
-      <div style="margin: 30px 0;">
-        <a href="#home" style="margin: 0 15px; color: #fff; text-decoration: none;">الرئيسية</a>
-        <a href="#courses" style="margin: 0 15px; color: #fff; text-decoration: none;">الدورات</a>
-        <a href="#about" style="margin: 0 15px; color: #fff; text-decoration: none;">من نحن</a>
-        <a href="#contact" style="margin: 0 15px; color: #fff; text-decoration: none;">تواصل معنا</a>
-      </div>
-  
-      <div style="margin-bottom: 20px;">
-        <a href="https://t.me/elrayeneonline" target="_blank" 
-           style="color: #d36bd8; text-decoration: none;">
-          📲 تيليغرام
-        </a>
-      </div>
-  
-      <p style="font-size: 0.9rem; color: #aaa;">
-        &copy; 2025 أكاديمية الريان. جميع الحقوق محفوظة.
-      </p>
-    </div>
-  </footer>  
-
-
-  <script>
-    // Toggle mobile navigation on hamburger click
-    const hamburger = document.getElementById("hamburger");
-    const nav = document.getElementById("nav");
-
-    hamburger.addEventListener("click", function() {
-      nav.classList.toggle("active");
-    });
-  </script>
-
-
-<script>
-  function toggleDropdown() {
-    const dropdown = document.getElementById("languageDropdown");
-    dropdown.classList.toggle("open");
-  }
-
-  // Close the dropdown if user clicks outside
-  document.addEventListener("click", function(event) {
-    const dropdown = document.getElementById("languageDropdown");
-    if (!dropdown.contains(event.target)) {
-      dropdown.classList.remove("open");
-    }
-  });
-</script>
-
-</body>
-</html>
-
-
-
-
-
-
-
-  
