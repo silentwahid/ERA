@@ -77,7 +77,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-
+      flex-wrap: wrap;
     }
 
     /* Logo styling */
@@ -87,12 +87,10 @@
       color: #6d2e8b;
       text-decoration: none;
     }
-    .logo{
-      width:10%;
-    }
+
 
     .logo a img {
-      width: 100%;
+      width: 25%;
       /* Adjust as needed */
     }
 
